@@ -109,6 +109,7 @@ app.post('/login', passport.authenticate('local', {
     failureFlash: true
 }));
 
+// Define a route for handling logout requests
 app.get('/logout', (req, res) => {
     req.logout(function(err) {
         if (err) {
