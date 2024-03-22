@@ -8,8 +8,8 @@ class TwitterController {
 
   async createTweet(text) {
     try {
-      await this.twitterModel.tweet(text);
-      return "Tweet created successfully";
+      const myTweet = await this.twitterModel.tweet(text);
+      return myTweet;
     } catch (error) {
       throw error;
     }

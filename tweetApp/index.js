@@ -10,8 +10,9 @@ const twitterController = new TwitterController();
 // Handle the route for creating a tweet
 app.get("/tweet", async (req, res) => {
   try {
-    const tweetResult = await twitterController.createTweet("Second tweet is created");
+    const tweetResult = await twitterController.createTweet("Tweet testing");
     res.send(tweetResult);
+    
   } catch (error) {
     res.status(500).send("Error creating tweet");
   }
